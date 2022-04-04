@@ -1,0 +1,60 @@
+
+<div class="container">
+
+<div class="new">
+  <div style='float: right;'>
+
+<%= link_to "New note", new_note_path, class:"btn btn-primary btn-lg" %>
+
+</div>
+
+</div>
+<br/>
+
+<div class="d-flex">
+
+    <%= search_form_for @q do |f| %>
+
+    <%= f.search_field :title_cont %>
+    <%= f.submit class: "btn btn-primary" %>
+    <% end %>
+</div>
+<br/>
+
+
+  <% @notes.each do |note| %>
+  <% if note.user == current_user %>
+
+<div class="card w-75 bg-light mb-3">
+  <div class="card-body">
+    <h5 class="card-title"><%= note.title %></h5>
+    <p class="card-text"><%= note.subtitle %></p>
+    <p class="card-text"><small class="text-muted"><%= note.created_at %></small></p>
+    <%= link_to 'Show', note,  class: "btn btn-primary" %>
+  </div>
+</div>
+
+<br/>
+
+
+ 
+
+  
+
+ 
+
+    <%end%>
+    <%end%>
+  
+ 
+
+
+
+
+
+
+
+</div>
+
+
+

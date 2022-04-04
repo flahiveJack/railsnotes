@@ -1,0 +1,49 @@
+<h1>Weather Updates</h1>
+
+
+<p>
+
+
+<br/>
+
+<div class="card">
+  <h5 class="card-header">Weather Updates</h5>
+  <div class="card-body">
+    <p>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" >
+    Weather
+  </button>
+</p>
+<div style="min-height: 120px;">
+  <div class="collapse collapse-horizontal" id="collapseWidthExample">
+    <div class="card card-body" style="width: 300px;">
+      <% if @forecast.present? %>
+   <pre><%= JSON.pretty_generate(@forecast['weather']) %></pre>
+<% end %>
+<br/>
+<% if @forecast.present? %>
+   <pre><%= JSON.pretty_generate(@forecast['main'])  %></pre>
+<% end %>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+

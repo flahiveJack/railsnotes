@@ -1,0 +1,27 @@
+<h1>News Updates</h1>
+
+<div class="card">
+  <h5 class="card-header">News Updates</h5>
+  <div class="card-body">
+    <p>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" >
+    News
+  </button>
+</p>
+<div style="min-height: 120px;">
+  <div class="collapse collapse-horizontal" id="collapseWidthExample">
+    <div class="card card-body" style="width: 300px;">
+      <% if @news.present? %>
+   <pre><%= JSON.pretty_generate(@news) %></pre>
+<% end %>
+<br/>
+<% if @forecast.present? %>
+   <pre><%= JSON.pretty_generate(@news)  %></pre>
+<% end %>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>
